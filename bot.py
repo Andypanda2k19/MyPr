@@ -29,22 +29,17 @@ def allrow_rasp(callback):
     if callback.data == 'day1':
         file = open('1.jpg', 'rb')
         bot.send_photo(callback.message.chat.id, file, '🍲 Понедельник')
-        bot.delete_message(callback.message.chat.id, callback.message.id)
     if callback.data == 'day2':
         file = open('2.jpg', 'rb')
         bot.send_photo(callback.message.chat.id, file, '🍲 Вторник')
-        bot.delete_message(callback.message.chat.id, callback.message.id)
     if callback.data == 'day3':
         file = open('3.jpg', 'rb')
         bot.send_photo(callback.message.chat.id, file, '🍲 Среда')
-        bot.delete_message(callback.message.chat.id, callback.message.id)
     if callback.data == 'day4':
         file = open('4.jpg', 'rb')
         bot.send_photo(callback.message.chat.id, file, '🍲 Четверг')
-        bot.delete_message(callback.message.chat.id, callback.message.id)
     if callback.data == 'day5':
         file = open('5.jpg', 'rb')
         bot.send_photo(callback.message.chat.id, file, '🍲 Пятница')
-        bot.delete_message(callback.message.chat.id, callback.message.id)
 
 bot.polling(none_stop=True, interval=0)
