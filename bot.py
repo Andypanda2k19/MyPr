@@ -24,7 +24,7 @@ def allrow_rasp(callback):
         btn4 = types.InlineKeyboardButton(text='🍲 Четверг', callback_data='day4')
         btn5 = types.InlineKeyboardButton(text='🍲 Пятница', callback_data='day5')
         markup.add(btn1,btn2,btn3,btn4,btn5)
-        bot.edit_message_text(chat_id = callback.message.chat.id, message_id = callback.message.id, text = 'Выберите день недели',reply_markup=markup)
+        bot.send_message(chat_id = callback.message.chat.id, text = 'Выберите день недели',reply_markup=markup)
 
     if callback.data == 'day1':
         file = open('1.jpg', 'rb')
